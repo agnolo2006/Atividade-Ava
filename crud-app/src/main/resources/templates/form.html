@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Formulário de Usuário</title>
+</head>
+<body>
+    <h1>Formulário de Usuário</h1>
+    <form th:action="@{/usuarios}" th:object="${usuario}" method="post">
+        <label>Nome: <input type="text" th:field="*{nome}" /></label><br/>
+        <label>Email: <input type="email" th:field="*{email}" /></label><br/>
+        <label>Senha: <input type="password" th:field="*{senha}" /></label><br/>
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>
